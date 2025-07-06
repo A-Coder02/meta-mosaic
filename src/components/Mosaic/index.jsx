@@ -3,6 +3,8 @@ import useMediaQuery from "../../hooks/useMediaQuery";
 import MosaicPixel from "./MosaicPixel";
 import ImageDialog from "../ImageDialog";
 
+import '../../App.css'
+
 const Mosaic = ({
   images = [],
   size: defaultSize = 14,
