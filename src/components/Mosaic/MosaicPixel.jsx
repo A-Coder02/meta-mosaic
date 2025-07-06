@@ -28,7 +28,7 @@ const MosaicPixel = ({
             backgroundSize: `${width}px ${height}px`,
             backgroundPosition: bgPosition,
           }}
-          onClick={onClickCard}
+          onClick={() =>onClickCard(image)}
         >
           <div
             className="mosaic-cell-img"

@@ -26,8 +26,14 @@ const App = () => {
           boxShadow: "0 0 1em rgba(255,255,255,0.5)",
         }}
         bgPosition="center 8px"
-        width={{xs: 350, md: 500, lg: 650}}
-        height={{xs: 350, md: 500, lg: 650}}
+        width={{ xs: 350, md: 500, lg: 650 }}
+        height={{ xs: 350, md: 500, lg: 650 }}
+        setDialog={(img) => (
+          <div>
+            <h2>{img.id}</h2>
+            <img src={img.link} alt={img.title} />
+          </div>
+        )}
       />
     </div>
   );

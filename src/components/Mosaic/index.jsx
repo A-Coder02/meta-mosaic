@@ -12,7 +12,7 @@ const Mosaic = ({
   width: widthQuery = { xs: 350, md: 500, lg: 700 },
   height: heightQuery = { xs: 350, md: 500, lg: 700 },
   bgPosition = "center",
-  setDialog
+  setDialog = null
 }) => {
   const [size, setSize] = useState(defaultSize);
 
