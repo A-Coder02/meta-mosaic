@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import MosaicPixel from "./MosaicPixel";
+import ImageDialog from "../ImageDialog";
 
 const Mosaic = ({
   images = [],
@@ -11,8 +12,19 @@ const Mosaic = ({
   width: widthQuery = { xs: 350, md: 500, lg: 700 },
   height: heightQuery = { xs: 350, md: 500, lg: 700 },
   bgPosition = "center",
+  setDialog
 }) => {
   const [size, setSize] = useState(defaultSize);
+
+  const [showDialog, setShowDialog] = useState(false);
+  const [selectedCard, setSelectedCard] = useState({});
+
+  const onClickCard = (selectedCard = null) => {
+    if (selectedCard) setSelectedCard(selectedCard);
+    setShowDialog(true);
+  };
+
+  const closeDialog = () => setShowDialog(false);
 
   const { isXs, isMd, isLg } = useMediaQuery();
   let width = 350;
@@ -73,8 +85,19 @@ const Mosaic = ({
           width={width}
           height={height}
           bgPosition={bgPosition}
+          onClickCard={onClickCard}
         />
       ))}
+
+      {showDialog && (
+        <ImageDialog
+          image={selectedCard}
+          onClose={closeDialog}
+          animationType="top"
+          position={"top"}
+          setDialog={setDialog}
+        />
+      )}
     </div>
   );
 };

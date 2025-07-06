@@ -40,4 +40,63 @@
 
 
 
+/* Slide Animations */
+@keyframes slide-in-top {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slide-out-top {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slide-out-right {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes slide-in-bottom {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slide-out-bottom {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slide-out-left {
+  from { transform: translateX(0); opacity: 1; }
+  to { transform: translateX(-100%); opacity: 0; }
+}
+
+/* Zoom Animations */
+@keyframes zoom-in {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes zoom-out {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.5); opacity: 0; }
+}
+
+/* Class mapping */
+.slide-in-top     { animation: slide-in-top 0.3s forwards; }
+.slide-out-top    { animation: slide-out-top 0.3s forwards; }
+.slide-in-right   { animation: slide-in-right 0.3s forwards; }
+.slide-out-right  { animation: slide-out-right 0.3s forwards; }
+.slide-in-bottom  { animation: slide-in-bottom 0.3s forwards; }
+.slide-out-bottom { animation: slide-out-bottom 0.3s forwards; }
+.slide-in-left    { animation: slide-in-left 0.3s forwards; }
+.slide-out-left   { animation: slide-out-left 0.3s forwards; }
+.zoom-in          { animation: zoom-in 0.3s forwards; }
+.zoom-out         { animation: zoom-out 0.3s forwards; }
+
 

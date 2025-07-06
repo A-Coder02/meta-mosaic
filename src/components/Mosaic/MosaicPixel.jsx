@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-const MosaicPixel = ({ image, bgImageUrl, width, height, bgPosition }) => {
+const MosaicPixel = ({
+  image,
+  bgImageUrl,
+  width,
+  height,
+  bgPosition,
+  onClickCard,
+}) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -19,8 +26,9 @@ const MosaicPixel = ({ image, bgImageUrl, width, height, bgPosition }) => {
           style={{
             backgroundImage: `url(${bgImageUrl})`,
             backgroundSize: `${width}px ${height}px`,
-            backgroundPosition: bgPosition
+            backgroundPosition: bgPosition,
           }}
+          onClick={onClickCard}
         >
           <div
             className="mosaic-cell-img"
