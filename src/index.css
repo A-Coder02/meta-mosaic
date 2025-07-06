@@ -1,0 +1,29 @@
+/* Custom Classes */
+
+.custom-mosaic-grid-wrapper {
+  border-radius: 0.2em;
+  overflow: hidden;
+}
+
+.mosaic-cell-wrapper {
+  transition: transform 0.4s;
+}
+
+.mosaic-cell-wrapper:hover {
+  transform: scale(1.1);
+  z-index: 3;
+}
+
+.mosaic-cell-img {
+  transition: 0.3s;
+  transition-delay: 0.5s;
+}
+
+
+.mosaic-cell-wrapper:hover .mosaic-cell-img {
+  opacity: 1;
+  mix-blend-mode: normal;
+  transition-delay: 0s;
+  border-radius: 0.1em;
+  z-index: 4;
+}
