@@ -1,12 +1,78 @@
-# React + Vite
+# 🧩 meta-mosaic
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, customizable image mosaic component for React. Supports breakpoints, overlays, custom styling, and custom modals for image previews.
 
-Currently, two official plugins are available:
+![Demo Mosaic](https://i.etsystatic.com/32237469/r/il/72bad1/4009560313/il_570xN.4009560313_q4ps.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install meta-mosaic
+# or
+yarn add meta-mosaic
+⚡ Quick Usage
+tsx
+Copy
+Edit
+import React from "react";
+import Mosaic from "meta-mosaic";
+
+const images = Array.from({ length: 400 }, (_, i) => ({
+  id: i + 1,
+  link: `https://picsum.photos/id/${101 + i}/400/300`,
+}));
+
+const App = () => {
+  return (
+    <Mosaic
+      images={images}
+      size={20}
+      bgImageUrl="https://i.etsystatic.com/32237469/r/il/72bad1/4009560313/il_570xN.4009560313_q4ps.jpg"
+      gridWrapperClassName="custom-mosaic-grid-wrapper"
+      gridWrapperStyle={{ boxShadow: "0 0 1em rgba(255,255,255,0.5)" }}
+      bgPosition="center 8px"
+      width={{ xs: 350, md: 500, lg: 650 }}
+      height={{ xs: 350, md: 500, lg: 650 }}
+      setDialog={(img) => (
+        <div>
+          <h2>{img.id}</h2>
+          <img src={img.link} alt={`Image ${img.id}`} />
+        </div>
+      )}
+    />
+  );
+};
+🧩 Props
+Prop	Type	Description
+images	Array<{ id: number, link: string }>	List of images to populate the mosaic
+size	number	Grid size (e.g., number of rows)
+bgImageUrl	string	URL of the main background image
+bgPosition	string	CSS background-position value
+width	{ xs: number, md: number, lg: number }	Responsive widths
+height	{ xs: number, md: number, lg: number }	Responsive heights
+gridWrapperClassName	string	Custom class for the mosaic wrapper
+gridWrapperStyle	React.CSSProperties	Inline styles for the wrapper
+setDialog	(img) => JSX.Element	Function to render custom modal/dialog content
+
+📐 Responsive Layout
+Pass breakpoints to width and height:
+
+js
+Copy
+Edit
+width={{ xs: 320, md: 600, lg: 900 }}
+height={{ xs: 320, md: 600, lg: 900 }}
+🪄 Custom Dialog
+Use the setDialog prop to render custom components on image click:
+
+tsx
+Copy
+Edit
+setDialog={(img) => (
+  <div>
+    <h2>{img.id}</h2>
+    <img src={img.link} alt={`Image ${img.id}`} />
+  </div>
+)}
