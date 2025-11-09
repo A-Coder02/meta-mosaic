@@ -1,8 +1,7 @@
-# 🧩 meta-mosaic
+# 🧩 MetaMosaic
 
-A responsive, customizable image mosaic component for React. Supports breakpoints, overlays, custom styling, and custom modals for image previews.
-
-![Demo Mosaic](https://i.etsystatic.com/32237469/r/il/72bad1/4009560313/il_570xN.4009560313_q4ps.jpg)
+> A simple and responsive React component to create a mosaic grid of images — with background image, custom styles, and click dialog support.
+<img width="1215" height="514" alt="Screenshot 2025-11-09 at 6 42 07 PM" src="https://github.com/user-attachments/assets/fd24e2f8-df1e-4122-84b3-b7cbe1a8a8f9" />
 
 ---
 
@@ -12,25 +11,39 @@ A responsive, customizable image mosaic component for React. Supports breakpoint
 npm install meta-mosaic
 # or
 yarn add meta-mosaic
-⚡ Quick Usage
-tsx
-Copy
-Edit
+```
+
+Then import it in your project:
+
+```jsx
+import { MetaMosaic } from "meta-mosaic";
+import "meta-mosaic/dist/meta-mosaic.css";
+```
+
+---
+
+## ⚡ Quick Example
+
+```jsx
 import React from "react";
-import Mosaic from "meta-mosaic";
+import { MetaMosaic } from "meta-mosaic";
+import "meta-mosaic/dist/meta-mosaic.css";
 
 const images = Array.from({ length: 400 }, (_, i) => ({
   id: i + 1,
   link: `https://picsum.photos/id/${101 + i}/400/300`,
+  title: `Image ${i + 1}`,
 }));
 
-const App = () => {
+const bgImage = "https://i.etsystatic.com/32237469/r/il/72bad1/4009560313/il_570xN.4009560313_q4ps.jpg";
+
+function App() {
   return (
-    <Mosaic
+    <MetaMosaic
       images={images}
       size={20}
-      bgImageUrl="https://i.etsystatic.com/32237469/r/il/72bad1/4009560313/il_570xN.4009560313_q4ps.jpg"
-      gridWrapperClassName="custom-mosaic-grid-wrapper"
+      bgImageUrl={bgImage}
+      gridWrapperClassName="custom-mosaic-wrapper"
       gridWrapperStyle={{ boxShadow: "0 0 1em rgba(255,255,255,0.5)" }}
       bgPosition="center 8px"
       width={{ xs: 350, md: 500, lg: 650 }}
@@ -38,41 +51,87 @@ const App = () => {
       setDialog={(img) => (
         <div>
           <h2>{img.id}</h2>
-          <img src={img.link} alt={`Image ${img.id}`} />
+          <h6 style={{ color: "red" }}>{img.title}</h6>
+          <img src={img.link} alt={img.title} />
         </div>
       )}
     />
   );
-};
-🧩 Props
-Prop	Type	Description
-images	Array<{ id: number, link: string }>	List of images to populate the mosaic
-size	number	Grid size (e.g., number of rows)
-bgImageUrl	string	URL of the main background image
-bgPosition	string	CSS background-position value
-width	{ xs: number, md: number, lg: number }	Responsive widths
-height	{ xs: number, md: number, lg: number }	Responsive heights
-gridWrapperClassName	string	Custom class for the mosaic wrapper
-gridWrapperStyle	React.CSSProperties	Inline styles for the wrapper
-setDialog	(img) => JSX.Element	Function to render custom modal/dialog content
+}
 
-📐 Responsive Layout
-Pass breakpoints to width and height:
+export default App;
+```
 
-js
-Copy
-Edit
-width={{ xs: 320, md: 600, lg: 900 }}
-height={{ xs: 320, md: 600, lg: 900 }}
-🪄 Custom Dialog
-Use the setDialog prop to render custom components on image click:
+---
 
-tsx
-Copy
-Edit
+## 🧩 Props Guide
+
+| Prop                     | Type       | Description                                                                        |
+| ------------------------ | ---------- | ---------------------------------------------------------------------------------- |
+| **images**               | `Array`    | List of images to display in mosaic. Each image should have `{ id, link, title }`. |
+| **size**                 | `number`   | Defines number of rows and columns. Example: `size={4}` → 4x4 grid.                |
+| **bgImageUrl**           | `string`   | Background image for the mosaic layout.                                            |
+| **gridWrapperClassName** | `string`   | Add your custom class to the grid wrapper.                                         |
+| **gridWrapperStyle**     | `object`   | Inline CSS styles for grid wrapper.                                                |
+| **bgPosition**           | `string`   | Adjust the background image position (e.g. `"center 8px"`).                        |
+| **width**                | `object`   | Responsive width based on breakpoints: `{ xs, md, lg }`.                           |
+| **height**               | `object`   | Responsive height based on breakpoints: `{ xs, md, lg }`.                          |
+| **setDialog**            | `function` | Custom component that opens when clicking a mosaic cell.                           |
+
+---
+
+## 💡 Example: setDialog
+
+<img width="1216" height="707" alt="Screenshot 2025-11-09 at 6 42 50 PM" src="https://github.com/user-attachments/assets/0a81379d-e28d-4671-a749-b881ef68519d" />
+
+
+```jsx
 setDialog={(img) => (
   <div>
     <h2>{img.id}</h2>
-    <img src={img.link} alt={`Image ${img.id}`} />
+    <h6 style={{ color: 'red' }}>{img.title}</h6>
+    <img src={img.link} alt={img.title} />
   </div>
 )}
+```
+
+This function runs when a user clicks on a cell. You can render any custom component here.
+
+---
+
+## 🪄 Responsive Behavior
+
+You can set different `width` and `height` values for small, medium, and large screens:
+
+```jsx
+width={{ xs: 350, md: 500, lg: 650 }}
+height={{ xs: 350, md: 500, lg: 650 }}
+```
+
+The component adjusts automatically based on screen size.
+
+---
+
+## 📦 Changelog
+
+### v1.0.11 — (2025-11-09)
+
+#### ✨ New Features
+
+* Added all props: `images`, `size`, `bgImageUrl`, `gridWrapperClassName`, `gridWrapperStyle`, `bgPosition`, `width`, `height`, and `setDialog`.
+* Fully responsive and customizable grid.
+* Clickable mosaic cells with custom dialog support.
+
+---
+
+## 🧠 Tips
+
+* Use high-quality images for better visual effect.
+* The `bgImageUrl` should have similar aspect ratio as your grid.
+* Combine `gridWrapperStyle` with `className` for fine-tuned control.
+
+---
+
+## 📜 License
+
+MIT © [MetaMosaic](https://www.npmjs.com/package/meta-mosaic)
