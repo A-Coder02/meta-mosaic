@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-### Bugs
+## Bugs — (2025-11-09)
 
 - Mosaic breaks when an image is clicked
 - Bg image is sticky
