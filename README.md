@@ -1,6 +1,7 @@
 # 🧩 MetaMosaic
 
 > A simple and responsive React component to create a mosaic grid of images — with background image, custom styles, and click dialog support.
+<img width="1215" height="514" alt="Screenshot 2025-11-09 at 6 42 07 PM" src="https://github.com/user-attachments/assets/fd24e2f8-df1e-4122-84b3-b7cbe1a8a8f9" />
 
 ---
 
@@ -80,6 +81,9 @@ export default App;
 ---
 
 ## 💡 Example: setDialog
+
+<img width="1216" height="707" alt="Screenshot 2025-11-09 at 6 42 50 PM" src="https://github.com/user-attachments/assets/0a81379d-e28d-4671-a749-b881ef68519d" />
+
 
 ```jsx
 setDialog={(img) => (
