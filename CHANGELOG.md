@@ -4,8 +4,9 @@
 
 ## Bugs — (2025-11-09)
 
-- Mosaic breaks when an image is clicked
-- Bg image is sticky
+- Bg image is sticky - Naiem
+- Suitable Keywords - Arbaj
+- Change ReadMe Image to Gid to better showcase - Arbaj
 
 ## v1.0.11 — (2025-11-09)
 
