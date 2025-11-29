@@ -7,6 +7,7 @@
 - Bg image is sticky - Naiem
 - Suitable Keywords - Arbaj
 - Change ReadMe Image to Gid to better showcase - Arbaj
+- Code Optimizagtion 
 
 ## v1.0.11 — (2025-11-09)
 
