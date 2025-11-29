@@ -2,13 +2,16 @@
 
 ## Unreleased
 
+- Code Optimization
+- Meta tags and Favicons
+
 ## Bugs — (2025-11-09)
 
-- Bg image is sticky - Naiem - done
-- Suitable Keywords - Arbaj
-- Change ReadMe Image to Gid to better showcase - Arbaj
-- Code Optimizagtion
-- Meta tags and Favicons
+## Resolved - (2025-11-29)
+
+- Pixel's image are fixed
+- Added suitable keywords and content for SEO and GEO
+- Enhanced README.md content
 
 ## v1.0.11 — (2025-11-09)
 
