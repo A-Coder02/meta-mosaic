@@ -4,7 +4,7 @@
 
 ## Bugs — (2025-11-09)
 
-- Bg image is sticky - Naiem
+- Bg image is sticky - Naiem - done
 - Suitable Keywords - Arbaj
 - Change ReadMe Image to Gid to better showcase - Arbaj
 - Code Optimizagtion
