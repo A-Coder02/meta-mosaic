@@ -1,8 +1,7 @@
 # 🧩 MetaMosaic
 
 > A simple and responsive React component to create a mosaic grid of images — with background image, custom styles, and click dialog support.
-![ScreenRecording2025-11-29at4 09 29PM-ezgif com-optimize (2)](https://github.com/user-attachments/assets/172c6b36-616c-42fe-ba49-c05b0fe9a223)
-
+> ![ScreenRecording2025-11-29at4 09 29PM-ezgif com-optimize (2)](https://github.com/user-attachments/assets/172c6b36-616c-42fe-ba49-c05b0fe9a223)
 
 ![npm version](https://img.shields.io/npm/v/meta-mosaic)
 ![License](https://img.shields.io/npm/l/meta-mosaic)
@@ -41,7 +40,8 @@ const images = Array.from({ length: 400 }, (_, i) => ({
   title: `Image ${i + 1}`,
 }));
 
-const bgImage = "https://i.etsystatic.com/32237469/r/il/72bad1/4009560313/il_570xN.4009560313_q4ps.jpg";
+const bgImage =
+  "https://i.etsystatic.com/32237469/r/il/72bad1/4009560313/il_570xN.4009560313_q4ps.jpg";
 
 function App() {
   return (
@@ -88,9 +88,6 @@ export default App;
 
 ## 💡 Example: setDialog
 
-<img width="1216" height="707" alt="Screenshot 2025-11-09 at 6 42 50 PM" src="https://github.com/user-attachments/assets/0a81379d-e28d-4671-a749-b881ef68519d" />
-
-
 ```jsx
 setDialog={(img) => (
   <div>
@@ -124,21 +121,22 @@ The component adjusts automatically based on screen size.
 
 #### ✨ New Features
 
-* Added all props: `images`, `size`, `bgImageUrl`, `gridWrapperClassName`, `gridWrapperStyle`, `bgPosition`, `width`, `height`, and `setDialog`.
-* Fully responsive and customizable grid.
-* Clickable mosaic cells with custom dialog support.
+- Added all props: `images`, `size`, `bgImageUrl`, `gridWrapperClassName`, `gridWrapperStyle`, `bgPosition`, `width`, `height`, and `setDialog`.
+- Fully responsive and customizable grid.
+- Clickable mosaic cells with custom dialog support.
 
 ---
 
 ## 🧠 Tips
 
-* Use high-quality images for better visual effect.
-* The `bgImageUrl` should have similar aspect ratio as your grid.
-* Combine `gridWrapperStyle` with `className` for fine-tuned control.
+- Use high-quality images for better visual effect.
+- The `bgImageUrl` should have similar aspect ratio as your grid.
+- Combine `gridWrapperStyle` with `className` for fine-tuned control.
 
 ---
 
 ## Alternatives & Comparisons
+
 - `react-mosaic-component` - More complex, for window management
 - `@tilework/mosaic` - E-commerce focused
 - `react-photo-gallery` - Simpler, no dialog support
