@@ -1,8 +1,19 @@
 # Changelog
 
+## Unreleased
+
+## Bugs — (2025-11-09)
+
+- Bg image is sticky - Naiem
+- Suitable Keywords - Arbaj
+- Change ReadMe Image to Gid to better showcase - Arbaj
+- Code Optimizagtion
+- Meta tags and Favicons
+
 ## v1.0.11 — (2025-11-09)
 
 ### ✨ New Features
+
 - **`images` prop** — Accepts an array of image objects (`{ id, link, title }`) to render inside the mosaic.
 - **`size` prop** — Controls both the number of rows and columns.  
   Example: `size={4}` → 4x4 mosaic grid.
@@ -22,3 +33,4 @@
       <img src={img.link} alt={img.title} />
     </div>
   )}
+  ```

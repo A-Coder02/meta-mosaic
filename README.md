@@ -1,7 +1,13 @@
 # 🧩 MetaMosaic
 
 > A simple and responsive React component to create a mosaic grid of images — with background image, custom styles, and click dialog support.
-<img width="1215" height="514" alt="Screenshot 2025-11-09 at 6 42 07 PM" src="https://github.com/user-attachments/assets/fd24e2f8-df1e-4122-84b3-b7cbe1a8a8f9" />
+![ScreenRecording2025-11-29at4 09 29PM-ezgif com-optimize (2)](https://github.com/user-attachments/assets/172c6b36-616c-42fe-ba49-c05b0fe9a223)
+
+
+![npm version](https://img.shields.io/npm/v/meta-mosaic)
+![License](https://img.shields.io/npm/l/meta-mosaic)
+![Downloads](https://img.shields.io/npm/dw/meta-mosaic)
+[![React](https://img.shields.io/badge/React-17+-blue)](https://reactjs.org/)
 
 ---
 
@@ -129,6 +135,16 @@ The component adjusts automatically based on screen size.
 * Use high-quality images for better visual effect.
 * The `bgImageUrl` should have similar aspect ratio as your grid.
 * Combine `gridWrapperStyle` with `className` for fine-tuned control.
+
+---
+
+## Alternatives & Comparisons
+- `react-mosaic-component` - More complex, for window management
+- `@tilework/mosaic` - E-commerce focused
+- `react-photo-gallery` - Simpler, no dialog support
+- `react-grid-gallery` - Heavy bundle, more features
+
+**meta-mosaic** is lightweight and perfect for simple, responsive image grids with metadata.
 
 ---
 
