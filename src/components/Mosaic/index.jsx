@@ -60,7 +60,6 @@ const Mosaic = ({
 
   let numberOfRows = size;
   let numberOfColumns = size;
-  // todo: if number of row increment necessary then incementet
 
   return (
     <div
@@ -72,7 +71,7 @@ const Mosaic = ({
         gridTemplateRows: `repeat(${numberOfRows}, 1fr)`,
         backgroundImage: `url(${bgImageUrl})`,
         backgroundSize: `${width}px ${height}px`,
-        backgroundPosition: bgPosition,
+        backgroundPosition: "0px 0px",
         width: `${width}px`,
         height: `${height}px`,
         ...gridWrapperStyle,
@@ -80,13 +79,17 @@ const Mosaic = ({
     >
       <div className="mosaic-grid-wrapper-overlay" />
 
-      {images.map((img) => (
+      {images.map((img, index) => (
         <MosaicPixel
+          key={img.id}
           image={img}
           bgImageUrl={bgImageUrl}
           width={width}
           height={height}
-          bgPosition={bgPosition}
+          row={Math.floor(index / numberOfColumns)}
+          col={index % numberOfColumns}
+          totalRows={numberOfRows}
+          totalCols={numberOfColumns}
           onClickCard={onClickCard}
         />
       ))}
