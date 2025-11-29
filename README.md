@@ -3,6 +3,12 @@
 > A simple and responsive React component to create a mosaic grid of images — with background image, custom styles, and click dialog support.
 ![ScreenRecording2025-11-29at4 09 29PM-ezgif com-optimize (2)](https://github.com/user-attachments/assets/172c6b36-616c-42fe-ba49-c05b0fe9a223)
 
+
+![npm version](https://img.shields.io/npm/v/meta-mosaic)
+![License](https://img.shields.io/npm/l/meta-mosaic)
+![Downloads](https://img.shields.io/npm/dw/meta-mosaic)
+[![React](https://img.shields.io/badge/React-17+-blue)](https://reactjs.org/)
+
 ---
 
 ## 🚀 Installation
