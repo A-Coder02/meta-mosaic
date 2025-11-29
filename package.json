@@ -49,6 +49,10 @@
   ],
   "author": "Arbaj Ansari",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A-Coder02/meta-mosaic"
+  },
   "scripts": {
     "build": "vite build"
   },
