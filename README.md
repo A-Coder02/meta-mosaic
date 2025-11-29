@@ -132,6 +132,16 @@ The component adjusts automatically based on screen size.
 
 ---
 
+## Alternatives & Comparisons
+- `react-mosaic-component` - More complex, for window management
+- `@tilework/mosaic` - E-commerce focused
+- `react-photo-gallery` - Simpler, no dialog support
+- `react-grid-gallery` - Heavy bundle, more features
+
+**meta-mosaic** is lightweight and perfect for simple, responsive image grids with metadata.
+
+---
+
 ## 📜 License
 
 MIT © [MetaMosaic](https://www.npmjs.com/package/meta-mosaic)
