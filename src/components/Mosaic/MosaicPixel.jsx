@@ -5,7 +5,10 @@ const MosaicPixel = ({
   bgImageUrl,
   width,
   height,
-  bgPosition,
+  row,
+  col,
+  totalRows,
+  totalCols,
   onClickCard,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -15,20 +18,28 @@ const MosaicPixel = ({
     const img = new Image();
     img.src = image.link;
     img.onload = () => setIsLoaded(true);
-    img.onerror = () => setIsLoaded(false); // optional
+    img.onerror = () => setIsLoaded(false);
   }, [image]);
 
+  // Calculate with maximum precision
+  const cellWidth = width / totalCols;
+  const cellHeight = height / totalRows;
+  
+  // Use Number() with toFixed(5) for precise positioning
+  const bgPosX = Number((-(col * cellWidth)).toFixed(5));
+  const bgPosY = Number((-(row * cellHeight)).toFixed(5));
+
   return (
-    <div key={image.id} className={`mosaic-cell-wrapper`}>
+    <div className="mosaic-cell-wrapper">
       {!isLoaded ? null : (
         <div
           className="mosaic-cell"
           style={{
             backgroundImage: `url(${bgImageUrl})`,
             backgroundSize: `${width}px ${height}px`,
-            backgroundPosition: bgPosition,
+            backgroundPosition: `${bgPosX}px ${bgPosY}px`,
           }}
-          onClick={() =>onClickCard(image)}
+          onClick={() => onClickCard(image)}
         >
           <div
             className="mosaic-cell-img"
