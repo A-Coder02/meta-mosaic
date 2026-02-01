@@ -1,7 +1,7 @@
 # 🧩 MetaMosaic
 
 > A simple and responsive React component to create a mosaic grid of images — with background image, custom styles, and click dialog support.
-> ![ScreenRecording2025-11-29at4 09 29PM-ezgif com-optimize (2)](https://github.com/user-attachments/assets/172c6b36-616c-42fe-ba49-c05b0fe9a223)
+> ![react,react component,react photo,react-photo-view,photo,image,photo preview,image preview,gallery,carousel,ui,reactcomponent,typescript,tiling-window-manager,window-manager,react-image-mosaic,mosaic,react mosaic npm,react-mosaic,meta-mosaic,meta-mosaic npm,meta mosaic,meta mosaic npm](https://github.com/user-attachments/assets/172c6b36-616c-42fe-ba49-c05b0fe9a223)
 
 ![npm version](https://img.shields.io/npm/v/meta-mosaic)
 ![License](https://img.shields.io/npm/l/meta-mosaic)
